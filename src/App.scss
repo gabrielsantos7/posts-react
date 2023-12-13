@@ -1,0 +1,33 @@
+.container {
+  min-height: 100vh;
+  background-color: #140e1a;
+  color: white;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.post {
+  background-color: #1f1729;
+  transition: transform 400ms ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .post-content {
+    padding: 3rem
+  }
+
+  h2 {
+    padding-bottom: 1rem;
+  }
+}
