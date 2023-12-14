@@ -1,3 +1,5 @@
+import './styles.scss';
+
 export const PostCard = ({ id, image, title, body }) => {
   return (
     <div className='post' key={id}>

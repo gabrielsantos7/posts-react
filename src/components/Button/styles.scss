@@ -1,0 +1,33 @@
+$main-purple: #644dff;
+$secondary-purple: #654dff63;
+
+.button {
+  cursor: pointer;
+  padding: 2rem 5rem;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: $main-purple;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 5px 5px 0 $secondary-purple;
+
+  transition: all 0.1s ease;
+
+  &:active{
+    transform: translateY(2px) translateX(2px);
+    box-shadow: 3px 3px 0 $secondary-purple;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #888;
+    box-shadow: 5px 5px 0 #666;
+
+    &:active{
+      transform: translateY(2px) translateX(2px);
+      box-shadow: 3px 3px 0 #666;
+    }
+  }
+}
