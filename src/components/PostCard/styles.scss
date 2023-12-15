@@ -1,5 +1,7 @@
+@use '../../styles/colors.scss' as colors;
+
 .post {
-  background-color: #1f1729;
+  background-color: colors.$secondary-dark-gray;
   transition: transform 400ms ease-in-out;
 
   &:hover {

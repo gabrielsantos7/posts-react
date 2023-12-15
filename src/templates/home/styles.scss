@@ -1,11 +1,35 @@
+@use '../../styles/colors.scss' as colors;
+
 .container {
   min-height: 100vh;
-  background-color: #140e1a;
+  background-color: colors.$primary-dark-gray;
   color: white;
 }
 
-.button-container {
+.button-container,
+.input-container {
   padding: 3rem 0;
   display: grid;
   place-items: center;
+}
+
+.loader-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.input-container {
+  p {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+h2.not-found {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 15%;
 }
