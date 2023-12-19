@@ -15,14 +15,14 @@ describe('<SearchInput />', () => {
 
   it('should call handleChange function on each key pressed', () => {
     const fn = jest.fn();
-    render(<SearchInput handleInputChange={fn} />);
+    render(<SearchInput handleInputChange={fn} searchValue={'Testing...'} />);
 
     const input = screen.getByPlaceholderText(
       /search for the title of a post/i,
     );
     expect(input).toBeInTheDocument();
 
-    const value = 'A dummy value';
+    const value = 'Testing...';
     userEvent.type(input, value);
 
     expect(input.value).toBe(value);
