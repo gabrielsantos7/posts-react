@@ -12,4 +12,10 @@ describe('<Posts />', () => {
 
     expect(screen.getAllByText(/body/i)).toHaveLength(3);
   });
+
+  it('should not render posts', () => {
+    render(<Posts />);
+
+    expect(screen.queryAllByRole(/body/i)).toHaveLength(0);
+  });
 });
