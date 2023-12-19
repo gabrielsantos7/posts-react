@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import './styles.scss';
 
 export const SearchInput = ({ searchValue, handleInputChange }) => {
@@ -9,4 +11,9 @@ export const SearchInput = ({ searchValue, handleInputChange }) => {
       onChange={(e) => handleInputChange(e)}
     />
   );
+};
+
+SearchInput.propTypes = {
+  searchValue: PropTypes.string.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
 };
